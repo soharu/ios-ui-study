@@ -16,6 +16,11 @@
 		491D6AC0212C3A6200EA4751 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4901FF05212C2B5E0005147C /* AppDelegate.swift */; };
 		491D6AC1212C3A6500EA4751 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4901FF0C212C2B600005147C /* Assets.xcassets */; };
 		491D6AC2212C3A6800EA4751 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4901FF0E212C2B600005147C /* LaunchScreen.storyboard */; };
+		495AB8BC212DAC1500B382F1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495AB8BB212DAC1500B382F1 /* MainViewController.swift */; };
+		495AB8C9212DAC3600B382F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4901FF05212C2B5E0005147C /* AppDelegate.swift */; };
+		495AB8CA212DAC3900B382F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4901FF0C212C2B600005147C /* Assets.xcassets */; };
+		495AB8CB212DAC4300B382F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4901FF0E212C2B600005147C /* LaunchScreen.storyboard */; };
+		4EE802FC6A2416AE4BA6C4DC /* Pods_LocalizedNumberInputField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E514B064C61EC20B2D1D23F7 /* Pods_LocalizedNumberInputField.framework */; };
 		E94D7DF9D92B08FD9421EFA6 /* Pods_NumberInputField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2212317EB806AE75BF21D5FB /* Pods_NumberInputField.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,10 +36,16 @@
 		491D6AAE212C3A1F00EA4751 /* NumberInputField.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NumberInputField.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		491D6AB2212C3A1F00EA4751 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		491D6ABC212C3A2000EA4751 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		495AB8B7212DAC1500B382F1 /* LocalizedNumberInputField.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalizedNumberInputField.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		495AB8BB212DAC1500B382F1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		495AB8C5212DAC1600B382F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A93208DFF86E6F9D236AA983 /* Pods_Samples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Samples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B777A2B993D0593E4D5E55C5 /* Pods-NumberInputField.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NumberInputField.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NumberInputField/Pods-NumberInputField.debug.xcconfig"; sourceTree = "<group>"; };
+		B861560D9781AC92B1C24D9A /* Pods-LocalizedNumberInputField.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalizedNumberInputField.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LocalizedNumberInputField/Pods-LocalizedNumberInputField.debug.xcconfig"; sourceTree = "<group>"; };
 		CB316F65323FE71D02ACCE79 /* Pods-Hello.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hello.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hello/Pods-Hello.release.xcconfig"; sourceTree = "<group>"; };
 		E49B3CCD5BC45ABD324910C5 /* Pods_Hello.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hello.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E514B064C61EC20B2D1D23F7 /* Pods_LocalizedNumberInputField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocalizedNumberInputField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9BF0795DA3CEC3D11CA3BF9 /* Pods-LocalizedNumberInputField.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalizedNumberInputField.release.xcconfig"; path = "Pods/Target Support Files/Pods-LocalizedNumberInputField/Pods-LocalizedNumberInputField.release.xcconfig"; sourceTree = "<group>"; };
 		F3BB7D8C6FA3A7986EB4820D /* Pods-Hello.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hello.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hello/Pods-Hello.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,6 +66,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		495AB8B4212DAC1500B382F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EE802FC6A2416AE4BA6C4DC /* Pods_LocalizedNumberInputField.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -64,6 +83,7 @@
 				491D6AA7212C37BF00EA4751 /* Common */,
 				491D6A95212C320C00EA4751 /* Hello */,
 				491D6AAF212C3A1F00EA4751 /* NumberInputField */,
+				495AB8B8212DAC1500B382F1 /* LocalizedNumberInputField */,
 				4901FF03212C2B5E0005147C /* Products */,
 				9F47282276DD998222F5A3D1 /* Pods */,
 				873B7F3F8F27B368106281CD /* Frameworks */,
@@ -75,6 +95,7 @@
 			children = (
 				491D6A94212C320C00EA4751 /* Hello.app */,
 				491D6AAE212C3A1F00EA4751 /* NumberInputField.app */,
+				495AB8B7212DAC1500B382F1 /* LocalizedNumberInputField.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -107,12 +128,22 @@
 			path = NumberInputField;
 			sourceTree = "<group>";
 		};
+		495AB8B8212DAC1500B382F1 /* LocalizedNumberInputField */ = {
+			isa = PBXGroup;
+			children = (
+				495AB8BB212DAC1500B382F1 /* MainViewController.swift */,
+				495AB8C5212DAC1600B382F1 /* Info.plist */,
+			);
+			path = LocalizedNumberInputField;
+			sourceTree = "<group>";
+		};
 		873B7F3F8F27B368106281CD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				A93208DFF86E6F9D236AA983 /* Pods_Samples.framework */,
 				E49B3CCD5BC45ABD324910C5 /* Pods_Hello.framework */,
 				2212317EB806AE75BF21D5FB /* Pods_NumberInputField.framework */,
+				E514B064C61EC20B2D1D23F7 /* Pods_LocalizedNumberInputField.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -124,6 +155,8 @@
 				CB316F65323FE71D02ACCE79 /* Pods-Hello.release.xcconfig */,
 				B777A2B993D0593E4D5E55C5 /* Pods-NumberInputField.debug.xcconfig */,
 				0250469822D00DCE2BD414E9 /* Pods-NumberInputField.release.xcconfig */,
+				B861560D9781AC92B1C24D9A /* Pods-LocalizedNumberInputField.debug.xcconfig */,
+				E9BF0795DA3CEC3D11CA3BF9 /* Pods-LocalizedNumberInputField.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -169,6 +202,25 @@
 			productReference = 491D6AAE212C3A1F00EA4751 /* NumberInputField.app */;
 			productType = "com.apple.product-type.application";
 		};
+		495AB8B6212DAC1500B382F1 /* LocalizedNumberInputField */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 495AB8C8212DAC1600B382F1 /* Build configuration list for PBXNativeTarget "LocalizedNumberInputField" */;
+			buildPhases = (
+				6B2309AD3C562ED9B8A59E3A /* [CP] Check Pods Manifest.lock */,
+				495AB8B3212DAC1500B382F1 /* Sources */,
+				495AB8B4212DAC1500B382F1 /* Frameworks */,
+				495AB8B5212DAC1500B382F1 /* Resources */,
+				CBB729A115D3CBC731CE15AE /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LocalizedNumberInputField;
+			productName = LocalizedNumberInputField;
+			productReference = 495AB8B7212DAC1500B382F1 /* LocalizedNumberInputField.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -183,6 +235,9 @@
 						CreatedOnToolsVersion = 9.4.1;
 					};
 					491D6AAD212C3A1F00EA4751 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					495AB8B6212DAC1500B382F1 = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
 				};
@@ -202,6 +257,7 @@
 			targets = (
 				491D6A93212C320C00EA4751 /* Hello */,
 				491D6AAD212C3A1F00EA4751 /* NumberInputField */,
+				495AB8B6212DAC1500B382F1 /* LocalizedNumberInputField */,
 			);
 		};
 /* End PBXProject section */
@@ -222,6 +278,15 @@
 			files = (
 				491D6AC1212C3A6500EA4751 /* Assets.xcassets in Resources */,
 				491D6AC2212C3A6800EA4751 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		495AB8B5212DAC1500B382F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				495AB8CA212DAC3900B382F1 /* Assets.xcassets in Resources */,
+				495AB8CB212DAC4300B382F1 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +333,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		6B2309AD3C562ED9B8A59E3A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LocalizedNumberInputField-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		83D0722546F78933C33C00D0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -308,6 +391,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		CBB729A115D3CBC731CE15AE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LocalizedNumberInputField/Pods-LocalizedNumberInputField-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LocalizedNumberInputField/Pods-LocalizedNumberInputField-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -326,6 +431,15 @@
 			files = (
 				491D6AC0212C3A6200EA4751 /* AppDelegate.swift in Sources */,
 				491D6AB3212C3A1F00EA4751 /* MainViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		495AB8B3212DAC1500B382F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				495AB8C9212DAC3600B382F1 /* AppDelegate.swift in Sources */,
+				495AB8BC212DAC1500B382F1 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,10 +579,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8VEJUBZ828;
 				INFOPLIST_FILE = Hello/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.soharuart.Hello;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -484,10 +595,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8VEJUBZ828;
 				INFOPLIST_FILE = Hello/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.soharuart.Hello;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -503,10 +611,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8VEJUBZ828;
 				INFOPLIST_FILE = NumberInputField/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.soharuart.NumberInputField;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -522,11 +627,40 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8VEJUBZ828;
 				INFOPLIST_FILE = NumberInputField/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.soharuart.NumberInputField;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		495AB8C6212DAC1600B382F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B861560D9781AC92B1C24D9A /* Pods-LocalizedNumberInputField.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8VEJUBZ828;
+				INFOPLIST_FILE = LocalizedNumberInputField/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.soharuart.LocalizedNumberInputField;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		495AB8C7212DAC1600B382F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9BF0795DA3CEC3D11CA3BF9 /* Pods-LocalizedNumberInputField.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8VEJUBZ828;
+				INFOPLIST_FILE = LocalizedNumberInputField/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.soharuart.LocalizedNumberInputField;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -559,6 +693,15 @@
 			buildConfigurations = (
 				491D6ABE212C3A2000EA4751 /* Debug */,
 				491D6ABF212C3A2000EA4751 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		495AB8C8212DAC1600B382F1 /* Build configuration list for PBXNativeTarget "LocalizedNumberInputField" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				495AB8C6212DAC1600B382F1 /* Debug */,
+				495AB8C7212DAC1600B382F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -15,3 +15,7 @@ end
 target 'NumberInputField' do
     shared_config
 end
+
+target 'LocalizedNumberInputField' do
+    shared_config
+end
