@@ -44,6 +44,7 @@
 		C68B779A7402BBB7572FD08BBF6200FA /* Pods_Hello.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hello.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6C73203DFC67FFC66E38B96B86B1383 /* NumberInputField.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NumberInputField.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE52BF2C3F1DC4177577E5390FE29DCA /* Pods-NumberInputField.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NumberInputField.release.xcconfig"; path = "Pods/Target Support Files/Pods-NumberInputField/Pods-NumberInputField.release.xcconfig"; sourceTree = "<group>"; };
+		DF3F2D14294517BD881373C78270BE71 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F0A35AF2A5E0D8EEA972A88AA9D115E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6A55E78A702B3F60F2A4D562DFCC6B1 /* Pods-NumberInputField.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NumberInputField.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NumberInputField/Pods-NumberInputField.debug.xcconfig"; sourceTree = "<group>"; };
 		FD1B23E163BDE856B025ED348637929B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -77,17 +78,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		53AE7A5B9B80F0941A71620A808E9470 = {
+		086895FB852D8ABE2C2CD7E55B29ADC8 /* LocalizedNumberInputField */ = {
 			isa = PBXGroup;
 			children = (
-				24DBC91247F0340FDD1556697D8E9C7A /* Common */,
-				8206A4E7DA41C93B1365156042B8378C /* Frameworks */,
-				80F94F45BA898F937740E064763DCC38 /* Hello */,
-				086895FB852D8ABE2C2CD7E55B29ADC8 /* LocalizedNumberInputField */,
-				7F424FEF0B677708A4EA9C95545186F5 /* NumberInputField */,
-				849093B32331F90CF0C9EA8D8BC68802 /* Pods */,
-				103757059FF9EEB559F0098D12F41D96 /* Products */,
+				B2731A07C888C7143B48CF805169A346 /* Info.plist */,
+				1D32F33B79B19CD5474784D8FB6D0D2B /* MainViewController.swift */,
 			);
+			path = LocalizedNumberInputField;
 			sourceTree = "<group>";
 		};
 		103757059FF9EEB559F0098D12F41D96 /* Products */ = {
@@ -100,15 +97,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		80F94F45BA898F937740E064763DCC38 /* Hello */ = {
-			isa = PBXGroup;
-			children = (
-				C104160D3477690D44DF9C27997EAFE4 /* Info.plist */,
-				FD1B23E163BDE856B025ED348637929B /* MainViewController.swift */,
-			);
-			path = Hello;
-			sourceTree = "<group>";
-		};
 		24DBC91247F0340FDD1556697D8E9C7A /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +105,20 @@
 				F254C26CDC8DC39F0787FE7CAA6F0732 /* LaunchScreen.storyboard */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		53AE7A5B9B80F0941A71620A808E9470 = {
+			isa = PBXGroup;
+			children = (
+				24DBC91247F0340FDD1556697D8E9C7A /* Common */,
+				8206A4E7DA41C93B1365156042B8378C /* Frameworks */,
+				80F94F45BA898F937740E064763DCC38 /* Hello */,
+				086895FB852D8ABE2C2CD7E55B29ADC8 /* LocalizedNumberInputField */,
+				7F424FEF0B677708A4EA9C95545186F5 /* NumberInputField */,
+				849093B32331F90CF0C9EA8D8BC68802 /* Pods */,
+				103757059FF9EEB559F0098D12F41D96 /* Products */,
+				DF3F2D14294517BD881373C78270BE71 /* README.md */,
+			);
 			sourceTree = "<group>";
 		};
 		7F424FEF0B677708A4EA9C95545186F5 /* NumberInputField */ = {
@@ -128,13 +130,13 @@
 			path = NumberInputField;
 			sourceTree = "<group>";
 		};
-		086895FB852D8ABE2C2CD7E55B29ADC8 /* LocalizedNumberInputField */ = {
+		80F94F45BA898F937740E064763DCC38 /* Hello */ = {
 			isa = PBXGroup;
 			children = (
-				B2731A07C888C7143B48CF805169A346 /* Info.plist */,
-				1D32F33B79B19CD5474784D8FB6D0D2B /* MainViewController.swift */,
+				C104160D3477690D44DF9C27997EAFE4 /* Info.plist */,
+				FD1B23E163BDE856B025ED348637929B /* MainViewController.swift */,
 			);
-			path = LocalizedNumberInputField;
+			path = Hello;
 			sourceTree = "<group>";
 		};
 		8206A4E7DA41C93B1365156042B8378C /* Frameworks */ = {
@@ -164,25 +166,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D62FEEAAE2368358CD9A8C11F6307B18 /* Hello */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F7646DDC62EE5ED892E2F1D30BBCD27F /* Build configuration list for PBXNativeTarget "Hello" */;
-			buildPhases = (
-				61E158C5FFC8EF1A096CE8419A30E4F4 /* [CP] Check Pods Manifest.lock */,
-				205BD73BB83A081C09DB8FC4EE9AB48C /* Sources */,
-				48016374409997E4275043D5C4F460C4 /* Frameworks */,
-				16F748EDC4C7720781579BEDE7A7AAEE /* Resources */,
-				61D7D5BAF80E5AF137AF96DD5616F466 /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Hello;
-			productName = Hello;
-			productReference = BEFC7E131BBD98A37E9FDB80FFEF88DA /* Hello.app */;
-			productType = "com.apple.product-type.application";
-		};
 		862EB7E04DF149CD3492FF01BE92F3D8 /* NumberInputField */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF7FAE7AB4641926462E00F07F8DC49B /* Build configuration list for PBXNativeTarget "NumberInputField" */;
@@ -221,6 +204,25 @@
 			productReference = 41CF3A6CB55FFB5402D9E6988255CF7D /* LocalizedNumberInputField.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D62FEEAAE2368358CD9A8C11F6307B18 /* Hello */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7646DDC62EE5ED892E2F1D30BBCD27F /* Build configuration list for PBXNativeTarget "Hello" */;
+			buildPhases = (
+				61E158C5FFC8EF1A096CE8419A30E4F4 /* [CP] Check Pods Manifest.lock */,
+				205BD73BB83A081C09DB8FC4EE9AB48C /* Sources */,
+				48016374409997E4275043D5C4F460C4 /* Frameworks */,
+				16F748EDC4C7720781579BEDE7A7AAEE /* Resources */,
+				61D7D5BAF80E5AF137AF96DD5616F466 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Hello;
+			productName = Hello;
+			productReference = BEFC7E131BBD98A37E9FDB80FFEF88DA /* Hello.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -231,13 +233,13 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Jahyun Oh";
 				TargetAttributes = {
-					D62FEEAAE2368358CD9A8C11F6307B18 = {
-						CreatedOnToolsVersion = 9.4.1;
-					};
 					862EB7E04DF149CD3492FF01BE92F3D8 = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
 					916B2B96B77AE4982CFFD356A561552A = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					D62FEEAAE2368358CD9A8C11F6307B18 = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
 				};
@@ -293,6 +295,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		51FEA1A6892B7C520051DD38350B312E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NumberInputField-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		61D7D5BAF80E5AF137AF96DD5616F466 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -373,24 +393,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NumberInputField/Pods-NumberInputField-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		51FEA1A6892B7C520051DD38350B312E /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-NumberInputField-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		F6D9E25CB1C0A981C698278B235D2FDF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -416,21 +418,21 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		205BD73BB83A081C09DB8FC4EE9AB48C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B417180D09291D5C702DEBD5BCC10D4B /* AppDelegate.swift in Sources */,
-				ACA2608765453B52F7AB9D024CF78B74 /* MainViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		02E2385FA6813B9E0EE7008B5BBB9A1F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D7E2F68BD6B2150FC1A3BD3D4A3A6D6D /* AppDelegate.swift in Sources */,
 				113CB964AAC752F83C3FF0963C2204E6 /* MainViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		205BD73BB83A081C09DB8FC4EE9AB48C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B417180D09291D5C702DEBD5BCC10D4B /* AppDelegate.swift in Sources */,
+				ACA2608765453B52F7AB9D024CF78B74 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +459,25 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		42A29C9DA432ACAE4943DEED734EA154 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82C3F8CB4F02BEA217593561C1C0968F /* Pods-Hello.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8VEJUBZ828;
+				INFOPLIST_FILE = Hello/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.soharuart.Hello;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		962D2A079B753F9608DB0D88F8D6BA73 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -571,44 +592,6 @@
 			};
 			name = Release;
 		};
-		42A29C9DA432ACAE4943DEED734EA154 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 82C3F8CB4F02BEA217593561C1C0968F /* Pods-Hello.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8VEJUBZ828;
-				INFOPLIST_FILE = Hello/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.soharuart.Hello;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		BDB363BEF370FC61B7A4BA6D8AB44E78 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C60C16387620DED69F9F4C3D772B73E1 /* Pods-Hello.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8VEJUBZ828;
-				INFOPLIST_FILE = Hello/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.soharuart.Hello;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 		B8EAB00081E720695E373415F6F09981 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F6A55E78A702B3F60F2A4D562DFCC6B1 /* Pods-NumberInputField.debug.xcconfig */;
@@ -647,24 +630,24 @@
 			};
 			name = Release;
 		};
-		DE7D9E59DFEA6D1D5BB0849B76DFAB95 /* Debug */ = {
+		BDB363BEF370FC61B7A4BA6D8AB44E78 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 362E7361B5F57614D36EED20C06E75FD /* Pods-LocalizedNumberInputField.debug.xcconfig */;
+			baseConfigurationReference = C60C16387620DED69F9F4C3D772B73E1 /* Pods-Hello.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8VEJUBZ828;
-				INFOPLIST_FILE = LocalizedNumberInputField/Info.plist;
+				INFOPLIST_FILE = Hello/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.soharuart.LocalizedNumberInputField;
+				PRODUCT_BUNDLE_IDENTIFIER = com.soharuart.Hello;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Debug;
+			name = Release;
 		};
 		C905B8005E2BD8B9FFABEC77AC39570C /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -685,6 +668,25 @@
 			};
 			name = Release;
 		};
+		DE7D9E59DFEA6D1D5BB0849B76DFAB95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 362E7361B5F57614D36EED20C06E75FD /* Pods-LocalizedNumberInputField.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8VEJUBZ828;
+				INFOPLIST_FILE = LocalizedNumberInputField/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.soharuart.LocalizedNumberInputField;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -697,11 +699,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F7646DDC62EE5ED892E2F1D30BBCD27F /* Build configuration list for PBXNativeTarget "Hello" */ = {
+		B670F98B5DBBB354C240D4DB36DFE6F6 /* Build configuration list for PBXNativeTarget "LocalizedNumberInputField" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				42A29C9DA432ACAE4943DEED734EA154 /* Debug */,
-				BDB363BEF370FC61B7A4BA6D8AB44E78 /* Release */,
+				DE7D9E59DFEA6D1D5BB0849B76DFAB95 /* Debug */,
+				C905B8005E2BD8B9FFABEC77AC39570C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -715,11 +717,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B670F98B5DBBB354C240D4DB36DFE6F6 /* Build configuration list for PBXNativeTarget "LocalizedNumberInputField" */ = {
+		F7646DDC62EE5ED892E2F1D30BBCD27F /* Build configuration list for PBXNativeTarget "Hello" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DE7D9E59DFEA6D1D5BB0849B76DFAB95 /* Debug */,
-				C905B8005E2BD8B9FFABEC77AC39570C /* Release */,
+				42A29C9DA432ACAE4943DEED734EA154 /* Debug */,
+				BDB363BEF370FC61B7A4BA6D8AB44E78 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
