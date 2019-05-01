@@ -22,4 +22,5 @@ end
 
 target 'TextAttachmentLab' do
   shared_config
+  pod 'Kingfisher', '~> 5.0'
 end

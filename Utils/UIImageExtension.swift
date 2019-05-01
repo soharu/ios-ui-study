@@ -20,4 +20,16 @@ extension UIImage {
         guard let cgImage = image?.cgImage else { return nil }
         self.init(cgImage: cgImage)
     }
+
+    func sizeThatFits(font: UIFont) -> CGRect {
+        guard size.width > 0 && size.height > 0 else { return .zero }
+
+        let ratio = font.lineHeight / size.height
+        return CGRect(
+            x: 0,
+            y: font.descender,
+            width: size.width * ratio,
+            height: size.height * ratio
+        )
+    }
 }

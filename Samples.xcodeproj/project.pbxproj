@@ -14,6 +14,7 @@
 		4661D8D43987E383D2DD85C0A8073B26 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D32F33B79B19CD5474784D8FB6D0D2B /* MainViewController.swift */; };
 		4AD1ADA8D3847E9B3EC19CF9265A090B /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6B62F696822B4243191890B8DED1E3 /* UIImageExtension.swift */; };
 		4E9263A84498D5BF075B635846B6BF6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F254C26CDC8DC39F0787FE7CAA6F0732 /* LaunchScreen.storyboard */; };
+		4F3C52C8C20ACB46824363ED87E61072 /* URLImageTextAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E000434774798AA62C7DA1A9A03FE6 /* URLImageTextAttachment.swift */; };
 		569BC48AB8771B66EC165131C0635733 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FE30BADBDA1DD25855181579F1111D /* AppDelegate.swift */; };
 		5EBE071258B0E074410A9EBA767FFA5B /* Pods_NumberInputField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10EF9748F4A7B55F63DDFB70F13CEF5A /* Pods_NumberInputField.framework */; };
 		624B46C4EE55D415F06D766D806B05F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F254C26CDC8DC39F0787FE7CAA6F0732 /* LaunchScreen.storyboard */; };
@@ -28,6 +29,7 @@
 		CE59FC164D1FEDAA0C21F3BD57013E3D /* Pods_LocalizedNumberInputField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C341C9BFD3A3EEA43B00EC459141385 /* Pods_LocalizedNumberInputField.framework */; };
 		D7E2F68BD6B2150FC1A3BD3D4A3A6D6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FE30BADBDA1DD25855181579F1111D /* AppDelegate.swift */; };
 		E436590FC4A86EF98455135BA66155B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F254C26CDC8DC39F0787FE7CAA6F0732 /* LaunchScreen.storyboard */; };
+		E61E8E5EC961983E9EBDCCEDE91BFCA3 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D737D0DD715B01E275F03BB34EC071B0 /* Resource.swift */; };
 		FE53D8454C81DEB4A24B6599AA6E53FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0A35AF2A5E0D8EEA972A88AA9D115E3 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -57,9 +59,11 @@
 		C60C16387620DED69F9F4C3D772B73E1 /* Pods-Hello.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hello.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hello/Pods-Hello.release.xcconfig"; sourceTree = "<group>"; };
 		C68B779A7402BBB7572FD08BBF6200FA /* Pods_Hello.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hello.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6C73203DFC67FFC66E38B96B86B1383 /* NumberInputField.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NumberInputField.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D737D0DD715B01E275F03BB34EC071B0 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		DE52BF2C3F1DC4177577E5390FE29DCA /* Pods-NumberInputField.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NumberInputField.release.xcconfig"; path = "Pods/Target Support Files/Pods-NumberInputField/Pods-NumberInputField.release.xcconfig"; sourceTree = "<group>"; };
 		DF3F2D14294517BD881373C78270BE71 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F0A35AF2A5E0D8EEA972A88AA9D115E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F0E000434774798AA62C7DA1A9A03FE6 /* URLImageTextAttachment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageTextAttachment.swift; sourceTree = "<group>"; };
 		F544449D3BE3506BA69F3E9DE6F17303 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F6A55E78A702B3F60F2A4D562DFCC6B1 /* Pods-NumberInputField.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NumberInputField.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NumberInputField/Pods-NumberInputField.debug.xcconfig"; sourceTree = "<group>"; };
 		FD1B23E163BDE856B025ED348637929B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -197,6 +201,8 @@
 			children = (
 				42DA9A079D63BFD06B5045B1C2EE8DF5 /* Info.plist */,
 				F544449D3BE3506BA69F3E9DE6F17303 /* MainViewController.swift */,
+				D737D0DD715B01E275F03BB34EC071B0 /* Resource.swift */,
+				F0E000434774798AA62C7DA1A9A03FE6 /* URLImageTextAttachment.swift */,
 			);
 			path = TextAttachmentLab;
 			sourceTree = "<group>";
@@ -386,6 +392,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -394,6 +401,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -578,8 +586,10 @@
 			files = (
 				2B2656A027E68CB2B66C93243DC417B0 /* AppDelegate.swift in Sources */,
 				1C67C5F8840771385D6115CA9BE98515 /* MainViewController.swift in Sources */,
+				E61E8E5EC961983E9EBDCCEDE91BFCA3 /* Resource.swift in Sources */,
 				0DD9786A83FC0A51384E58AF2B7533EB /* UIColorExtension.swift in Sources */,
 				4AD1ADA8D3847E9B3EC19CF9265A090B /* UIImageExtension.swift in Sources */,
+				4F3C52C8C20ACB46824363ED87E61072 /* URLImageTextAttachment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
