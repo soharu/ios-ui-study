@@ -131,15 +131,6 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
-		CB20298904529C8595C21A7BDBB5D900 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				B2E3C74C5CFDF158292B0F1CB621A4D3 /* UIColorExtension.swift */,
-				BA6B62F696822B4243191890B8DED1E3 /* UIImageExtension.swift */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
 		53AE7A5B9B80F0941A71620A808E9470 = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +199,15 @@
 				F544449D3BE3506BA69F3E9DE6F17303 /* MainViewController.swift */,
 			);
 			path = TextAttachmentLab;
+			sourceTree = "<group>";
+		};
+		CB20298904529C8595C21A7BDBB5D900 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B2E3C74C5CFDF158292B0F1CB621A4D3 /* UIColorExtension.swift */,
+				BA6B62F696822B4243191890B8DED1E3 /* UIImageExtension.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
