@@ -19,3 +19,7 @@ end
 target 'LocalizedNumberInputField' do
     shared_config
 end
+
+target 'TextAttachmentLab' do
+  shared_config
+end
