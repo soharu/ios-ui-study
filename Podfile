@@ -24,3 +24,7 @@ target 'TextAttachmentLab' do
   shared_config
   pod 'Kingfisher', '~> 5.0'
 end
+
+target 'TextFlow' do
+    shared_config
+end
