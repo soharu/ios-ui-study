@@ -3,9 +3,9 @@ platform :ios, '10.0'
 
 def shared_config
   use_frameworks!
-  pod 'SnapKit', '4.0.0'
-  pod 'RxSwift', '~> 4.0'
-  pod 'RxCocoa', '~> 4.0'
+  pod 'SnapKit'
+  pod 'RxSwift'
+  pod 'RxCocoa'
 end
 
 target 'Hello' do
