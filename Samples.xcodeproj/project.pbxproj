@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		0DD9786A83FC0A51384E58AF2B7533EB /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E3C74C5CFDF158292B0F1CB621A4D3 /* UIColorExtension.swift */; };
 		113CB964AAC752F83C3FF0963C2204E6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A405BE256E7879915EC83621359BF178 /* MainViewController.swift */; };
+		13BABE36C05C00C73F5B4031312DCCE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FE30BADBDA1DD25855181579F1111D /* AppDelegate.swift */; };
 		1C67C5F8840771385D6115CA9BE98515 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F544449D3BE3506BA69F3E9DE6F17303 /* MainViewController.swift */; };
 		2B2656A027E68CB2B66C93243DC417B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FE30BADBDA1DD25855181579F1111D /* AppDelegate.swift */; };
+		43C64D65C480E1FF59A95D6868FDEA20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0A35AF2A5E0D8EEA972A88AA9D115E3 /* Assets.xcassets */; };
 		4661D8D43987E383D2DD85C0A8073B26 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D32F33B79B19CD5474784D8FB6D0D2B /* MainViewController.swift */; };
 		4AD1ADA8D3847E9B3EC19CF9265A090B /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6B62F696822B4243191890B8DED1E3 /* UIImageExtension.swift */; };
 		4E9263A84498D5BF075B635846B6BF6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F254C26CDC8DC39F0787FE7CAA6F0732 /* LaunchScreen.storyboard */; };
@@ -19,8 +21,10 @@
 		5EBE071258B0E074410A9EBA767FFA5B /* Pods_NumberInputField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10EF9748F4A7B55F63DDFB70F13CEF5A /* Pods_NumberInputField.framework */; };
 		624B46C4EE55D415F06D766D806B05F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F254C26CDC8DC39F0787FE7CAA6F0732 /* LaunchScreen.storyboard */; };
 		6DFA2DEB20B7B705A88055F5D84C04AB /* Pods_Hello.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C68B779A7402BBB7572FD08BBF6200FA /* Pods_Hello.framework */; };
+		70A17142FBBEABC2F6628D5CAC1F4CDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F254C26CDC8DC39F0787FE7CAA6F0732 /* LaunchScreen.storyboard */; };
 		7BDCDE744CC5A617424688669236F2CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F254C26CDC8DC39F0787FE7CAA6F0732 /* LaunchScreen.storyboard */; };
 		7CC65338049897F0CBE3FAA3C622F5D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0A35AF2A5E0D8EEA972A88AA9D115E3 /* Assets.xcassets */; };
+		A562143413B6CC2135F78281B61153E5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B340072CA2D98A590116FF5629AA0753 /* MainViewController.swift */; };
 		ACA2608765453B52F7AB9D024CF78B74 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1B23E163BDE856B025ED348637929B /* MainViewController.swift */; };
 		B022690553EF383AA3F99B7A9273CD4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0A35AF2A5E0D8EEA972A88AA9D115E3 /* Assets.xcassets */; };
 		B201BC7717F5F3678023EA979C82DBF3 /* Pods_TextAttachmentLab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A26FA713149FC2C891228F7FECC6D69 /* Pods_TextAttachmentLab.framework */; };
@@ -43,14 +47,17 @@
 		362E7361B5F57614D36EED20C06E75FD /* Pods-LocalizedNumberInputField.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalizedNumberInputField.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LocalizedNumberInputField/Pods-LocalizedNumberInputField.debug.xcconfig"; sourceTree = "<group>"; };
 		41CF3A6CB55FFB5402D9E6988255CF7D /* LocalizedNumberInputField.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalizedNumberInputField.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42DA9A079D63BFD06B5045B1C2EE8DF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6133538C3AB225255EC4B8D3335EEE54 /* TextFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C341C9BFD3A3EEA43B00EC459141385 /* Pods_LocalizedNumberInputField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocalizedNumberInputField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82C3F8CB4F02BEA217593561C1C0968F /* Pods-Hello.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hello.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hello/Pods-Hello.debug.xcconfig"; sourceTree = "<group>"; };
 		88D0E39D325454478D151A4FB9267AB3 /* Pods_Samples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Samples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A26FA713149FC2C891228F7FECC6D69 /* Pods_TextAttachmentLab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextAttachmentLab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9262FAC6E127C0BFF3A18C15C7EE184D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1439E6268AC58309096A43B313667EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A405BE256E7879915EC83621359BF178 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B2731A07C888C7143B48CF805169A346 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2E3C74C5CFDF158292B0F1CB621A4D3 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		B340072CA2D98A590116FF5629AA0753 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B412347758FE0299E71E7681F13CAC14 /* Pods-TextAttachmentLab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextAttachmentLab.release.xcconfig"; path = "Pods/Target Support Files/Pods-TextAttachmentLab/Pods-TextAttachmentLab.release.xcconfig"; sourceTree = "<group>"; };
 		BA6B62F696822B4243191890B8DED1E3 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		BEFC7E131BBD98A37E9FDB80FFEF88DA /* Hello.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hello.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +90,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DFA2DEB20B7B705A88055F5D84C04AB /* Pods_Hello.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93028B6D6C91B33F98CC915FA794031E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +135,7 @@
 				41CF3A6CB55FFB5402D9E6988255CF7D /* LocalizedNumberInputField.app */,
 				D6C73203DFC67FFC66E38B96B86B1383 /* NumberInputField.app */,
 				280FFA1D3FFD8BB06BBF6829677C6D7C /* TextAttachmentLab.app */,
+				6133538C3AB225255EC4B8D3335EEE54 /* TextFlow.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -146,6 +161,7 @@
 				849093B32331F90CF0C9EA8D8BC68802 /* Pods */,
 				103757059FF9EEB559F0098D12F41D96 /* Products */,
 				9A3663217E933CA1F3177995FCC5EAC4 /* TextAttachmentLab */,
+				F5514C16049986006F7FC04CCC1FCEAC /* TextFlow */,
 				CB20298904529C8595C21A7BDBB5D900 /* Utils */,
 				DF3F2D14294517BD881373C78270BE71 /* README.md */,
 			);
@@ -216,6 +232,15 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		F5514C16049986006F7FC04CCC1FCEAC /* TextFlow */ = {
+			isa = PBXGroup;
+			children = (
+				A1439E6268AC58309096A43B313667EA /* Info.plist */,
+				B340072CA2D98A590116FF5629AA0753 /* MainViewController.swift */,
+			);
+			path = TextFlow;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -255,6 +280,23 @@
 			name = LocalizedNumberInputField;
 			productName = LocalizedNumberInputField;
 			productReference = 41CF3A6CB55FFB5402D9E6988255CF7D /* LocalizedNumberInputField.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CB5EAC8F4442F23EEC12BD23D7024D4A /* TextFlow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6A06EF3653C35625E24CC5C7B6C5E47D /* Build configuration list for PBXNativeTarget "TextFlow" */;
+			buildPhases = (
+				18D2D8951FE2B74A5EA734585B21512C /* Sources */,
+				93028B6D6C91B33F98CC915FA794031E /* Frameworks */,
+				A68DBEE9619EDEDA79FB7CAF448E7B90 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TextFlow;
+			productName = TextFlow;
+			productReference = 6133538C3AB225255EC4B8D3335EEE54 /* TextFlow.app */;
 			productType = "com.apple.product-type.application";
 		};
 		D62FEEAAE2368358CD9A8C11F6307B18 /* Hello */ = {
@@ -301,7 +343,7 @@
 		DC8CD67556A0C4200602F3C1E4E2CB11 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1020;
+				LastSwiftUpdateCheck = 1030;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Jahyun Oh";
 				TargetAttributes = {
@@ -310,6 +352,9 @@
 					};
 					916B2B96B77AE4982CFFD356A561552A = {
 						CreatedOnToolsVersion = 9.4.1;
+					};
+					CB5EAC8F4442F23EEC12BD23D7024D4A = {
+						CreatedOnToolsVersion = 10.3;
 					};
 					D62FEEAAE2368358CD9A8C11F6307B18 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -336,6 +381,7 @@
 				862EB7E04DF149CD3492FF01BE92F3D8 /* NumberInputField */,
 				916B2B96B77AE4982CFFD356A561552A /* LocalizedNumberInputField */,
 				ED9A9958B7AF01AA5D760922FAA9D888 /* TextAttachmentLab */,
+				CB5EAC8F4442F23EEC12BD23D7024D4A /* TextFlow */,
 			);
 		};
 /* End PBXProject section */
@@ -356,6 +402,15 @@
 			files = (
 				C3625863038EA8A8D5788AD0A5C2A444 /* Assets.xcassets in Resources */,
 				4E9263A84498D5BF075B635846B6BF6E /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A68DBEE9619EDEDA79FB7CAF448E7B90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43C64D65C480E1FF59A95D6868FDEA20 /* Assets.xcassets in Resources */,
+				70A17142FBBEABC2F6628D5CAC1F4CDA /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,6 +591,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		18D2D8951FE2B74A5EA734585B21512C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13BABE36C05C00C73F5B4031312DCCE1 /* AppDelegate.swift in Sources */,
+				A562143413B6CC2135F78281B61153E5 /* MainViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		205BD73BB83A081C09DB8FC4EE9AB48C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -581,6 +645,26 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1FD2EEDE00174E1D5FEC00AC9F14AA44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TextFlow/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.soharuart.sample.TextFlow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		42A29C9DA432ACAE4943DEED734EA154 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 82C3F8CB4F02BEA217593561C1C0968F /* Pods-Hello.debug.xcconfig */;
@@ -599,6 +683,25 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
+		};
+		5798810E10FBE0652D97CF23DA729FE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TextFlow/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.soharuart.sample.TextFlow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
 		};
 		8C2221C873804F7EE97C9717A3DB25CF /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -858,6 +961,15 @@
 			buildConfigurations = (
 				8C2221C873804F7EE97C9717A3DB25CF /* Debug */,
 				E18DB59B960BA7A4894FE935CDC8FAC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6A06EF3653C35625E24CC5C7B6C5E47D /* Build configuration list for PBXNativeTarget "TextFlow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FD2EEDE00174E1D5FEC00AC9F14AA44 /* Debug */,
+				5798810E10FBE0652D97CF23DA729FE4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
