@@ -13,7 +13,17 @@ import RxCocoa
 
 class MainViewController: UIViewController {
     let textView = FlowingTextView()
-    let button = UIButton(type: .custom)
+    let flowButton = UIButton(type: .custom)
+    let changeButton = UIButton(type: .custom)
+
+    let texts = [
+        "길을 걸었지 누군가 옆에 있다고 느꼈을 때 "
+            + "나는 알아버렸네 이미 그대 떠난 후라는 걸 "
+            + "나는 혼자 걷고 있던거지 갑자기 바람이 차가와지네",
+        "언젠가 가겠지 푸르른 이 청춘 지고 또 피는 꽃잎처럼"
+            + "달밝은 밤이면 창가에 흐르는 내 젊은 영가가 구슬퍼",
+    ]
+    var currentTextIndex = 0
 
     let disposeBag = DisposeBag()
 
@@ -23,7 +33,6 @@ class MainViewController: UIViewController {
         view.backgroundColor = .white
 
         view.addSubview(textView)
-        view.addSubview(button)
 
         // textView
         textView.snp.makeConstraints { (maker) in
@@ -32,30 +41,52 @@ class MainViewController: UIViewController {
         }
 
         textView.backgroundColor = .yellow
-        let text = NSAttributedString(
-            string: "길을 걸었지 누군가 옆에 있다고 느꼈을 때 "
-                + "나는 알아버렸네 이미 그대 떠난 후라는 걸 "
-                + "나는 혼자 걷고 있던거지 갑자기 바람이 차가와지네",
+        let attributedText = NSAttributedString(
+            string: texts[currentTextIndex],
             attributes: [
                 NSAttributedString.Key.font : UIFont.systemFont(ofSize: 15, weight: .medium),
                 NSAttributedString.Key.foregroundColor: UIColor.black
             ]
         )
-        textView.setAttributedText(text)
+        textView.setAttributedText(attributedText)
 
-        // button
-        button.snp.makeConstraints { (maker) in
+        let stackView = UIStackView(arrangedSubviews: [flowButton, changeButton])
+        stackView.axis = .vertical
+        stackView.spacing = 10
+
+        view.addSubview(stackView)
+        stackView.snp.makeConstraints { (maker) in
             maker.width.equalToSuperview().dividedBy(2)
             maker.centerX.equalToSuperview()
             maker.top.equalTo(textView.snp.bottom).offset(20)
         }
 
-        button.setTitle("Flow", for: .normal)
-        button.setTitleColor(UIColor.blue, for: .normal)
+        // flowButton
+        flowButton.setTitle("Flow Text", for: .normal)
+        flowButton.setTitleColor(UIColor.blue, for: .normal)
 
-        button.rx.tap
+        flowButton.rx.tap
             .subscribe(onNext: { [weak self] in
                 self?.textView.flow()
+            })
+            .disposed(by: disposeBag)
+
+        // changeButton
+        changeButton.setTitle("Change Text", for: .normal)
+        changeButton.setTitleColor(UIColor.blue, for: .normal)
+
+        changeButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                guard let ss = self else { return }
+                ss.currentTextIndex = (ss.currentTextIndex + 1) % ss.texts.count
+                let attributedText = NSAttributedString(
+                    string: ss.texts[ss.currentTextIndex],
+                    attributes: [
+                        NSAttributedString.Key.font : UIFont.systemFont(ofSize: 15, weight: .medium),
+                        NSAttributedString.Key.foregroundColor: UIColor.black
+                    ]
+                )
+                ss.textView.setAttributedText(attributedText)
             })
             .disposed(by: disposeBag)
     }
