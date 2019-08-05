@@ -29,6 +29,7 @@
 		B022690553EF383AA3F99B7A9273CD4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0A35AF2A5E0D8EEA972A88AA9D115E3 /* Assets.xcassets */; };
 		B201BC7717F5F3678023EA979C82DBF3 /* Pods_TextAttachmentLab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A26FA713149FC2C891228F7FECC6D69 /* Pods_TextAttachmentLab.framework */; };
 		B417180D09291D5C702DEBD5BCC10D4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FE30BADBDA1DD25855181579F1111D /* AppDelegate.swift */; };
+		B7028B647483ECBFD2486E57957027B4 /* FlowingTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FF7407F49247C565F015C0D6080E37 /* FlowingTextView.swift */; };
 		C3625863038EA8A8D5788AD0A5C2A444 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0A35AF2A5E0D8EEA972A88AA9D115E3 /* Assets.xcassets */; };
 		CE59FC164D1FEDAA0C21F3BD57013E3D /* Pods_LocalizedNumberInputField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C341C9BFD3A3EEA43B00EC459141385 /* Pods_LocalizedNumberInputField.framework */; };
 		D7E2F68BD6B2150FC1A3BD3D4A3A6D6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FE30BADBDA1DD25855181579F1111D /* AppDelegate.swift */; };
@@ -69,6 +70,7 @@
 		C60C16387620DED69F9F4C3D772B73E1 /* Pods-Hello.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hello.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hello/Pods-Hello.release.xcconfig"; sourceTree = "<group>"; };
 		C68B779A7402BBB7572FD08BBF6200FA /* Pods_Hello.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hello.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C91A3884B0FEC46C6E9D11AD24975309 /* Pods_TextFlow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextFlow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5FF7407F49247C565F015C0D6080E37 /* FlowingTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowingTextView.swift; sourceTree = "<group>"; };
 		D6C73203DFC67FFC66E38B96B86B1383 /* NumberInputField.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NumberInputField.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D737D0DD715B01E275F03BB34EC071B0 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		DE52BF2C3F1DC4177577E5390FE29DCA /* Pods-NumberInputField.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NumberInputField.release.xcconfig"; path = "Pods/Target Support Files/Pods-NumberInputField/Pods-NumberInputField.release.xcconfig"; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 		F5514C16049986006F7FC04CCC1FCEAC /* TextFlow */ = {
 			isa = PBXGroup;
 			children = (
+				D5FF7407F49247C565F015C0D6080E37 /* FlowingTextView.swift */,
 				A1439E6268AC58309096A43B313667EA /* Info.plist */,
 				B340072CA2D98A590116FF5629AA0753 /* MainViewController.swift */,
 			);
@@ -445,28 +448,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		AF10E8870A80B5312F7E6C2CF6913CE8 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TextFlow-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		5122CA5F3C8D91C25B229091F65DB24A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -555,6 +536,45 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		9CF9CBC7405DC3E719A8BBC9DA34E0C4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TextFlow/Pods-TextFlow-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TextFlow/Pods-TextFlow-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TextFlow/Pods-TextFlow-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF10E8870A80B5312F7E6C2CF6913CE8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TextFlow-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B63A94F0B2F141A041DC72605616CBC3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -594,23 +614,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NumberInputField/Pods-NumberInputField-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9CF9CBC7405DC3E719A8BBC9DA34E0C4 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TextFlow/Pods-TextFlow-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TextFlow/Pods-TextFlow-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TextFlow/Pods-TextFlow-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		F6D9E25CB1C0A981C698278B235D2FDF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -645,6 +648,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13BABE36C05C00C73F5B4031312DCCE1 /* AppDelegate.swift in Sources */,
+				B7028B647483ECBFD2486E57957027B4 /* FlowingTextView.swift in Sources */,
 				A562143413B6CC2135F78281B61153E5 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
