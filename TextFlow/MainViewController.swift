@@ -33,13 +33,12 @@ class MainViewController: UIViewController {
 
         textView.backgroundColor = .yellow
         let text = NSAttributedString(
-            string: "마하반야바라밀다심경"
-                + "관자재보살 행심반야바라밀다시 조견오온개공 도일체고액"
-                + "사리자 색불이공 공불이색 색즉시공 공즉시색 수상행식 역부여시",
+            string: "길을 걸었지 누군가 옆에 있다고 느꼈을 때 "
+                + "나는 알아버렸네 이미 그대 떠난 후라는 걸 "
+                + "나는 혼자 걷고 있던거지 갑자기 바람이 차가와지네",
             attributes: [
                 NSAttributedString.Key.font : UIFont.systemFont(ofSize: 15, weight: .medium),
-                NSAttributedString.Key.foregroundColor: UIColor.black,
-                NSAttributedString.Key.backgroundColor: UIColor.green
+                NSAttributedString.Key.foregroundColor: UIColor.black
             ]
         )
         textView.setAttributedText(text)
@@ -62,8 +61,10 @@ class MainViewController: UIViewController {
     }
 }
 
-class FlowingTextView: UIScrollView {
+class FlowingTextView: UIView {
+    let scrollView = UIScrollView()
     let contentView = UIView()
+    let blankView = UIView()
     let textLabel = UILabel()
 
     init() {
@@ -72,7 +73,12 @@ class FlowingTextView: UIScrollView {
         translatesAutoresizingMaskIntoConstraints = false
         isUserInteractionEnabled = false
 
-        addSubview(contentView)
+        addSubview(scrollView)
+        scrollView.snp.makeConstraints { (maker) in
+            maker.edges.equalToSuperview()
+        }
+
+        scrollView.addSubview(contentView)
         contentView.snp.makeConstraints { (maker) in
             maker.edges.equalToSuperview()
             maker.height.equalToSuperview().priority(.low)
@@ -80,9 +86,17 @@ class FlowingTextView: UIScrollView {
         }
         contentView.backgroundColor = .red
 
+        contentView.addSubview(blankView)
+        blankView.snp.makeConstraints { (maker) in
+            maker.leading.top.bottom.equalToSuperview()
+            maker.width.equalTo(scrollView)
+        }
+        blankView.backgroundColor = .green
+
         contentView.addSubview(textLabel)
         textLabel.snp.makeConstraints { (maker) in
-             maker.edges.equalToSuperview()
+            maker.leading.equalTo(blankView.snp.trailing)
+            maker.top.bottom.trailing.equalToSuperview()
         }
     }
 
@@ -92,19 +106,19 @@ class FlowingTextView: UIScrollView {
 
     func flow() {
         let x: CGFloat = {
-            if contentOffset.x != 0 {
+            if scrollView.contentOffset.x != 0 {
                 return 0
             } else {
-                return textLabel.bounds.width - self.bounds.width
+                return textLabel.bounds.width
             }
         }()
 
         UIView.animate(
-            withDuration: 5,
+            withDuration: 5.0,
             delay: 0,
             options: [ .curveLinear ],
             animations: { [weak self] in
-                self?.contentOffset = CGPoint(x: x, y: 0)
+                self?.scrollView.contentOffset = CGPoint(x: x, y: 0)
         })
     }
 
