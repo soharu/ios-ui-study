@@ -45,14 +45,19 @@ class FlowingTextView: UIView {
         textLabel.snp.makeConstraints { (maker) in
             maker.leading.equalTo(blankView.snp.trailing)
             maker.top.bottom.trailing.equalToSuperview()
+            maker.width.greaterThanOrEqualTo(scrollView.snp.width)
         }
     }
 
     func setAttributedText(_ text: NSAttributedString) {
+        scrollView.layer.removeAllAnimations()
+
         textLabel.attributedText = text
+        scrollView.setContentOffset(.zero, animated: false)
     }
 
     func flow() {
+        let pixelPerSeconds: CGFloat = 100
         let x: CGFloat = {
             if scrollView.contentOffset.x != 0 {
                 return 0
@@ -60,9 +65,10 @@ class FlowingTextView: UIView {
                 return textLabel.bounds.width
             }
         }()
+        let duration = x / pixelPerSeconds
 
         UIView.animate(
-            withDuration: 5.0,
+            withDuration: TimeInterval(duration),
             delay: 0,
             options: [ .curveLinear ],
             animations: { [weak self] in
