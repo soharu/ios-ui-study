@@ -50,10 +50,11 @@ class FlowingTextView: UIView {
     }
 
     func setAttributedText(_ text: NSAttributedString) {
+        // FIXME: 애니메이션 삭제가 바로 안되는 것 같다. 아래 completion에서 finished가 항상 true로 옴
         scrollView.layer.removeAllAnimations()
 
         textLabel.attributedText = text
-        scrollView.setContentOffset(.zero, animated: false)
+        scrollView.contentOffset = .zero
     }
 
     func flow() {
@@ -67,12 +68,18 @@ class FlowingTextView: UIView {
         }()
         let duration = x / pixelPerSeconds
 
+        let id = UUID()
+
+        print("ani started: \(id) \(textLabel.attributedText?.string)")
         UIView.animate(
             withDuration: TimeInterval(duration),
             delay: 0,
             options: [ .curveLinear ],
             animations: { [weak self] in
                 self?.scrollView.contentOffset = CGPoint(x: x, y: 0)
+            },
+            completion: { [weak self] (finished) in
+                print("ani completion: \(id): \(finished) \(self!.scrollView.contentOffset)" )
         })
     }
 

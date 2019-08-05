@@ -14,7 +14,6 @@ import RxCocoa
 class MainViewController: UIViewController {
     let textView = FlowingTextView()
     let flowButton = UIButton(type: .custom)
-    let changeButton = UIButton(type: .custom)
 
     let texts = [
         "짧은 문장입니다.",
@@ -33,53 +32,30 @@ class MainViewController: UIViewController {
 
         view.backgroundColor = .white
 
-        view.addSubview(textView)
-
-        // textView
-        textView.snp.makeConstraints { (maker) in
-            maker.leading.trailing.equalToSuperview().inset(20)
-            maker.centerY.equalToSuperview()
-        }
-
-        textView.backgroundColor = .yellow
-        let attributedText = NSAttributedString(
-            string: texts[currentTextIndex],
-            attributes: [
-                NSAttributedString.Key.font : UIFont.systemFont(ofSize: 15, weight: .medium),
-                NSAttributedString.Key.foregroundColor: UIColor.black
-            ]
-        )
-        textView.setAttributedText(attributedText)
-
-        let stackView = UIStackView(arrangedSubviews: [flowButton, changeButton])
+        let stackView = UIStackView(arrangedSubviews: [textView, flowButton])
         stackView.axis = .vertical
         stackView.spacing = 10
+        stackView.alignment = .center
 
         view.addSubview(stackView)
         stackView.snp.makeConstraints { (maker) in
-            maker.width.equalToSuperview().dividedBy(2)
-            maker.centerX.equalToSuperview()
-            maker.top.equalTo(textView.snp.bottom).offset(20)
+            maker.leading.trailing.equalToSuperview()
+            maker.center.equalToSuperview()
         }
 
+        // textView
+        textView.snp.makeConstraints { (maker) in
+            maker.width.equalToSuperview().inset(20)
+        }
+        textView.backgroundColor = .gray
+
         // flowButton
-        flowButton.setTitle("Flow Text", for: .normal)
+        flowButton.setTitle("Flow", for: .normal)
         flowButton.setTitleColor(UIColor.blue, for: .normal)
 
         flowButton.rx.tap
             .subscribe(onNext: { [weak self] in
-                self?.textView.flow()
-            })
-            .disposed(by: disposeBag)
-
-        // changeButton
-        changeButton.setTitle("Change Text", for: .normal)
-        changeButton.setTitleColor(UIColor.blue, for: .normal)
-
-        changeButton.rx.tap
-            .subscribe(onNext: { [weak self] in
                 guard let ss = self else { return }
-                ss.currentTextIndex = (ss.currentTextIndex + 1) % ss.texts.count
                 let attributedText = NSAttributedString(
                     string: ss.texts[ss.currentTextIndex],
                     attributes: [
@@ -88,6 +64,11 @@ class MainViewController: UIViewController {
                     ]
                 )
                 ss.textView.setAttributedText(attributedText)
+                ss.currentTextIndex = (ss.currentTextIndex + 1) % ss.texts.count
+                // FIXME: 문자열 변경하고 바로 flow()를 호출하면 제대로 동작하지 않음. 원인 파악 필요
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: { [weak self] in
+                    self?.textView.flow()
+                })
             })
             .disposed(by: disposeBag)
     }
