@@ -26,5 +26,5 @@ target 'TextAttachmentLab' do
 end
 
 target 'TextFlow' do
-    shared_config
+  shared_config
 end
