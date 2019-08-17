@@ -65,7 +65,7 @@ class FlowingTextView: UIView {
 
         UIView.animate(
             withDuration: TimeInterval(duration),
-            delay: 0,
+            delay: 0.3,
             options: [ .curveLinear ],
             animations: { [weak self] in
                 self?.scrollView.contentOffset = CGPoint(x: x, y: 0)

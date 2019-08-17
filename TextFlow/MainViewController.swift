@@ -12,9 +12,6 @@ import RxSwift
 import RxCocoa
 
 class MainViewController: UIViewController {
-    let textView = FlowingTextView()
-    let flowButton = UIButton(type: .custom)
-
     let texts = [
         "짧은 문장입니다.",
         "길을 걸었지 누군가 옆에 있다고 느꼈을 때 "
@@ -23,9 +20,13 @@ class MainViewController: UIViewController {
         "언젠가 가겠지 푸르른 이 청춘 지고 또 피는 꽃잎처럼"
             + "달밝은 밤이면 창가에 흐르는 내 젊은 영가가 구슬퍼.",
     ]
-    var currentTextIndex = 0
+    let colors: [UIColor] = [.red, .green, .yellow]
+    var currentIndex = 0
 
     let disposeBag = DisposeBag()
+
+    let textView = FlowingTextView()
+    let flowButton = UIButton(type: .custom)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,13 +58,14 @@ class MainViewController: UIViewController {
             .subscribe(onNext: { [weak self] in
                 guard let ss = self else { return }
                 let attributedText = NSAttributedString(
-                    string: ss.texts[ss.currentTextIndex],
+                    string: ss.texts[ss.currentIndex],
                     attributes: [
                         NSAttributedString.Key.font : UIFont.systemFont(ofSize: 15, weight: .medium),
-                        NSAttributedString.Key.foregroundColor: UIColor.black
+                        NSAttributedString.Key.foregroundColor: UIColor.black,
+                        NSAttributedString.Key.backgroundColor: ss.colors[ss.currentIndex]
                     ]
                 )
-                ss.currentTextIndex = (ss.currentTextIndex + 1) % ss.texts.count
+                ss.currentIndex = (ss.currentIndex + 1) % ss.texts.count
 
                 ss.textView.setAttributedText(attributedText)
                 ss.textView.flow()
