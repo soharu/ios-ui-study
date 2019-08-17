@@ -45,9 +45,14 @@ class FlowingTextView: UIView {
     }
 
     func setAttributedText(_ text: NSAttributedString) {
+        // 기존 애니메이션 제거
         scrollView.layer.removeAllAnimations()
         scrollView.contentOffset = .zero
+
         textLabel.attributedText = text
+        // 위에서 attributedText 설정 하더라도 textLabel의 크기가 바로 업데이트 안됨
+        // textLabel.bounds가 다시 계산 되도록 호출
+        scrollView.layoutIfNeeded()
     }
 
     func flow() {

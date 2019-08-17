@@ -63,13 +63,10 @@ class MainViewController: UIViewController {
                         NSAttributedString.Key.foregroundColor: UIColor.black
                     ]
                 )
-
                 ss.currentTextIndex = (ss.currentTextIndex + 1) % ss.texts.count
+
                 ss.textView.setAttributedText(attributedText)
-                // FIXME: 문자열 변경하고 바로 flow()를 호출하면 제대로 동작하지 않음. 원인 파악 필요
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: { [weak self] in
-                    self?.textView.flow()
-                })
+                ss.textView.flow()
             })
             .disposed(by: disposeBag)
     }
