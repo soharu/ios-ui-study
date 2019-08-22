@@ -47,28 +47,46 @@ class FlowingTextView: UIView {
     func setAttributedText(_ text: NSAttributedString) {
         // 기존 애니메이션 제거
         scrollView.layer.removeAllAnimations()
-        scrollView.contentOffset = .zero
 
         textLabel.attributedText = text
         // 위에서 attributedText 설정 하더라도 textLabel의 크기가 바로 업데이트 안됨
         // textLabel.bounds가 다시 계산 되도록 호출
         scrollView.layoutIfNeeded()
+        scrollView.contentOffset = initialContentOffset
     }
 
     func flow() {
-        guard scrollView.contentOffset.x == 0 else { assertionFailure(); return }
+        guard scrollView.contentOffset.x == initialContentOffset.x else { assertionFailure(); return }
         guard textLabel.bounds.width > scrollView.bounds.width else { return }
 
         let pixelPerSeconds: CGFloat = 100
-        let x = textLabel.bounds.width - scrollView.bounds.width
-        let duration = x / pixelPerSeconds
+        let contentOffset = targetContentOffset
+        let duration = abs(contentOffset.x - scrollView.contentOffset.x) / pixelPerSeconds
 
         UIView.animate(
             withDuration: TimeInterval(duration),
             delay: 0.3,
             options: [ .curveLinear ],
             animations: { [weak self] in
-                self?.scrollView.contentOffset = CGPoint(x: x, y: 0)
+                self?.scrollView.contentOffset = contentOffset
             })
+    }
+
+    var initialContentOffset: CGPoint {
+        if UIApplication.shared.userInterfaceLayoutDirection == .rightToLeft {
+            return CGPoint(
+                x: scrollView.contentSize.width - scrollView.bounds.width,
+                y: 0)
+        } else {
+            return .zero
+        }
+    }
+
+    var targetContentOffset: CGPoint {
+        if UIApplication.shared.userInterfaceLayoutDirection == .rightToLeft {
+            return .zero
+        } else {
+            return CGPoint(x: textLabel.bounds.width - scrollView.bounds.width, y: 0)
+        }
     }
 }
