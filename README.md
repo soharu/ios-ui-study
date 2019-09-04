@@ -6,7 +6,7 @@ Personal study about iOS UI implementation programmatically without storyboard
 
 The goal is to create a collection of UI code that is useful, small, and simple.
 
-Each app target will focus on a single problem and present a concise solution.
+Each target will focus on a single problem and present a concise solution.
 
 ## Dependencies
 
@@ -15,6 +15,6 @@ I will use [SnapKit](https://github.com/SnapKit/SnapKit) for AutoLayout and use 
 ## Installation
 
 ```
-pod install
+bundle exec pod install
 open Samples.xcworkspace
 ```
