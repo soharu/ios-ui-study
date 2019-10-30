@@ -31,6 +31,7 @@
 		56340C3550A7635549CF65B261CED64A /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDB2C13D27365B9AA5734EA12582B29 /* RootViewController.swift */; };
 		569BC48AB8771B66EC165131C0635733 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FE30BADBDA1DD25855181579F1111D /* AppDelegate.swift */; };
 		580D38FD5123C5BBE77D410CC7AB0B63 /* Pods_NestedStack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95888C8DA4AA86612D6DF9821C74834 /* Pods_NestedStack.framework */; };
+		5D273222D5EFFD032E1BCE0D1EBB322F /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CAEA58EE3959A8E62C1788771F2F79 /* RootViewController.swift */; };
 		5E4009E1F591FB67CCD4D77C7D8B98F5 /* HelloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD4E7C1F2243BB45398C5063BA4DD5B /* HelloViewController.swift */; };
 		5EBE071258B0E074410A9EBA767FFA5B /* Pods_NumberInputField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10EF9748F4A7B55F63DDFB70F13CEF5A /* Pods_NumberInputField.framework */; };
 		5FFA4E1EBE462666C7DE1DDFEF1CA16E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0A35AF2A5E0D8EEA972A88AA9D115E3 /* Assets.xcassets */; };
@@ -131,6 +132,7 @@
 		DBDB2C13D27365B9AA5734EA12582B29 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		DE52BF2C3F1DC4177577E5390FE29DCA /* Pods-NumberInputField.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NumberInputField.release.xcconfig"; path = "Pods/Target Support Files/Pods-NumberInputField/Pods-NumberInputField.release.xcconfig"; sourceTree = "<group>"; };
 		DF3F2D14294517BD881373C78270BE71 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E1CAEA58EE3959A8E62C1788771F2F79 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		E8845D9835A85AE2A503AA23AB4BF805 /* Pods-Showcase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Showcase.release.xcconfig"; path = "Pods/Target Support Files/Pods-Showcase/Pods-Showcase.release.xcconfig"; sourceTree = "<group>"; };
 		EA0EE0D9641D14929309E2B122CEE7D6 /* ColorInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorInfo.swift; sourceTree = "<group>"; };
 		EB39311C318E36D14011A1CEFCE37F87 /* ViewControllerShowcase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerShowcase.swift; sourceTree = "<group>"; };
@@ -387,6 +389,7 @@
 				D5FF7407F49247C565F015C0D6080E37 /* FlowingTextView.swift */,
 				A1439E6268AC58309096A43B313667EA /* Info.plist */,
 				B340072CA2D98A590116FF5629AA0753 /* MainViewController.swift */,
+				E1CAEA58EE3959A8E62C1788771F2F79 /* RootViewController.swift */,
 			);
 			path = TextFlow;
 			sourceTree = "<group>";
@@ -1003,6 +1006,7 @@
 				13BABE36C05C00C73F5B4031312DCCE1 /* AppDelegate.swift in Sources */,
 				B7028B647483ECBFD2486E57957027B4 /* FlowingTextView.swift in Sources */,
 				A562143413B6CC2135F78281B61153E5 /* MainViewController.swift in Sources */,
+				5D273222D5EFFD032E1BCE0D1EBB322F /* RootViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
