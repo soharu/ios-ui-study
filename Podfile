@@ -33,7 +33,10 @@ target 'LabelCollection' do
   shared_config
 end
 
-
 target 'NestedStack' do
+  shared_config
+end
+
+target 'Showcase' do
   shared_config
 end

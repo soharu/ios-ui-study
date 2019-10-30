@@ -1,5 +1,5 @@
 //
-//  MainViewController.swift
+//  HelloViewController.swift
 //  Hello
 //
 //  Created by Jahyun Oh on 21/08/2018.
@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 
-class MainViewController: UIViewController {
+class HelloViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
