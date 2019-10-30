@@ -17,5 +17,3 @@ class NavigationController: UINavigationController {
         fatalError("init(coder:) has not been implemented")
     }
 }
-
-typealias MainViewController = NavigationController
