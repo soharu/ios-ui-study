@@ -11,8 +11,9 @@ import UIKit
 class ShowcaseTableViewController: UITableViewController {
     typealias Cell = ShowcaseTableViewCell
 
-    private let items: [ViewControllerShowcase] = [
-        HelloShowcase()
+    private let items: [Showcase] = [
+        HelloShowcase(),
+        FlowingTextShowcase(),
     ]
 
     override func viewDidLoad() {
