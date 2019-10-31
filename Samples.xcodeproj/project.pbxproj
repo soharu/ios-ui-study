@@ -45,12 +45,14 @@
 		7BDCDE744CC5A617424688669236F2CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F254C26CDC8DC39F0787FE7CAA6F0732 /* LaunchScreen.storyboard */; };
 		7CC65338049897F0CBE3FAA3C622F5D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0A35AF2A5E0D8EEA972A88AA9D115E3 /* Assets.xcassets */; };
 		802716627C22A41E872432EB44D653ED /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D667AF2CF4EDE4BE49DE770E85389B4D /* RootViewController.swift */; };
+		94FDE98BEA66BCCC69BDA85BAE128EBB /* FlowingTextDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DAC92D540B601FF45144DE3A854012 /* FlowingTextDemo.swift */; };
 		9F0928FD2DB6AAF89279862C5766A221 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F254C26CDC8DC39F0787FE7CAA6F0732 /* LaunchScreen.storyboard */; };
 		9F17A42A339B5F9760497650D8308180 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7096EC5D5C0798005CF738CBB5072CEA /* RootViewController.swift */; };
 		A1D3A916FA7A854CB7CDAC59AE6B443A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969BCE26732ED7E1A3284BFDAC8A67BD /* MainViewController.swift */; };
 		A38C1AFFAB900BC58769D699564EDC4A /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02D18BD731F3D366C462C75D3B27860 /* RootViewController.swift */; };
 		A562143413B6CC2135F78281B61153E5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B340072CA2D98A590116FF5629AA0753 /* MainViewController.swift */; };
 		ACEA4C982A98C1C9401C9D0B8B680306 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FE30BADBDA1DD25855181579F1111D /* AppDelegate.swift */; };
+		AF6A04F0753726232A2D0B004A717EEF /* FlowingTextDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DAC92D540B601FF45144DE3A854012 /* FlowingTextDemo.swift */; };
 		B022690553EF383AA3F99B7A9273CD4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0A35AF2A5E0D8EEA972A88AA9D115E3 /* Assets.xcassets */; };
 		B201BC7717F5F3678023EA979C82DBF3 /* Pods_TextAttachmentLab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A26FA713149FC2C891228F7FECC6D69 /* Pods_TextAttachmentLab.framework */; };
 		B417180D09291D5C702DEBD5BCC10D4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FE30BADBDA1DD25855181579F1111D /* AppDelegate.swift */; };
@@ -144,6 +146,7 @@
 		F0A35AF2A5E0D8EEA972A88AA9D115E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F0E000434774798AA62C7DA1A9A03FE6 /* URLImageTextAttachment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageTextAttachment.swift; sourceTree = "<group>"; };
 		F1D3D5436389D940A39AE0FA65CE6FF1 /* LabelCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCollectionView.swift; sourceTree = "<group>"; };
+		F2DAC92D540B601FF45144DE3A854012 /* FlowingTextDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowingTextDemo.swift; sourceTree = "<group>"; };
 		F41C8A3D64FA86C84E983B0A8F4F7AA8 /* Pods-Showcase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Showcase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Showcase/Pods-Showcase.debug.xcconfig"; sourceTree = "<group>"; };
 		F544449D3BE3506BA69F3E9DE6F17303 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F6A55E78A702B3F60F2A4D562DFCC6B1 /* Pods-NumberInputField.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NumberInputField.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NumberInputField/Pods-NumberInputField.debug.xcconfig"; sourceTree = "<group>"; };
@@ -401,6 +404,7 @@
 		F5514C16049986006F7FC04CCC1FCEAC /* TextFlow */ = {
 			isa = PBXGroup;
 			children = (
+				F2DAC92D540B601FF45144DE3A854012 /* FlowingTextDemo.swift */,
 				D5FF7407F49247C565F015C0D6080E37 /* FlowingTextView.swift */,
 				A1439E6268AC58309096A43B313667EA /* Info.plist */,
 				B340072CA2D98A590116FF5629AA0753 /* MainViewController.swift */,
@@ -1019,6 +1023,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13BABE36C05C00C73F5B4031312DCCE1 /* AppDelegate.swift in Sources */,
+				94FDE98BEA66BCCC69BDA85BAE128EBB /* FlowingTextDemo.swift in Sources */,
 				B7028B647483ECBFD2486E57957027B4 /* FlowingTextView.swift in Sources */,
 				A562143413B6CC2135F78281B61153E5 /* MainViewController.swift in Sources */,
 				5D273222D5EFFD032E1BCE0D1EBB322F /* RootViewController.swift in Sources */,
@@ -1064,6 +1069,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A9C9B0515E2B9AE4D3130E523CE5CBA /* AppDelegate.swift in Sources */,
+				AF6A04F0753726232A2D0B004A717EEF /* FlowingTextDemo.swift in Sources */,
 				C223D24DDDDE3DB7418E380E82B29A5B /* FlowingTextShowcase.swift in Sources */,
 				40E32B9D7C8367E495109A0729C48773 /* FlowingTextView.swift in Sources */,
 				5E4009E1F591FB67CCD4D77C7D8B98F5 /* HelloViewController.swift in Sources */,

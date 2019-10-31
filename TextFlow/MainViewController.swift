@@ -12,15 +12,12 @@ import RxSwift
 import RxCocoa
 
 class MainViewController: UIViewController {
-    let texts = [
-        "짧은 문장입니다.",
-        "길을 걸었지 누군가 옆에 있다고 느꼈을 때 "
-            + "나는 알아버렸네 이미 그대 떠난 후라는 걸 "
-            + "나는 혼자 걷고 있던거지 갑자기 바람이 차가와지네.",
-        "언젠가 가겠지 푸르른 이 청춘 지고 또 피는 꽃잎처럼"
-            + "달밝은 밤이면 창가에 흐르는 내 젊은 영가가 구슬퍼.",
+    let texts = FlowingTextDemo.texts
+    let colors: [UIColor] = [
+        .systemRed,
+        .systemGreen,
+        .systemYellow
     ]
-    let colors: [UIColor] = [.red, .green, .yellow]
     var currentIndex = 0
 
     let disposeBag = DisposeBag()
@@ -57,13 +54,14 @@ class MainViewController: UIViewController {
         flowButton.rx.tap
             .subscribe(onNext: { [weak self] in
                 guard let ss = self else { return }
+                let attributes: [NSAttributedString.Key : Any] = [
+                    .font : UIFont.systemFont(ofSize: 20, weight: .medium),
+                    .foregroundColor: UIColor.black,
+                    .backgroundColor: ss.colors[ss.currentIndex]
+                ]
                 let attributedText = NSAttributedString(
                     string: ss.texts[ss.currentIndex],
-                    attributes: [
-                        NSAttributedString.Key.font : UIFont.systemFont(ofSize: 15, weight: .medium),
-                        NSAttributedString.Key.foregroundColor: UIColor.black,
-                        NSAttributedString.Key.backgroundColor: ss.colors[ss.currentIndex]
-                    ]
+                    attributes: attributes
                 )
                 ss.currentIndex = (ss.currentIndex + 1) % ss.texts.count
 
