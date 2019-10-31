@@ -7,8 +7,52 @@
 //
 
 import UIKit
+import SnapKit
 
 protocol Showcase {
     var name: String { get }
     func instantiate() -> UIViewController
+}
+
+protocol ViewShowcase: Showcase {
+    func setUp(on stackView: UIStackView)
+}
+
+extension ViewShowcase {
+    func instantiate() -> UIViewController {
+        let vc = StackViewController()
+        vc.navigationItem.title = name
+        setUp(on: vc.stackView)
+        return vc
+    }
+}
+
+// MARK: - StackViewController
+
+private class StackViewController: UIViewController {
+    let stackView = UIStackView()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        view.backgroundColor = .white
+
+        let scrollView = UIScrollView()
+        view.addSubview(scrollView)
+        scrollView.snp.makeConstraints { (maker) in
+            maker.edges.equalToSuperview()
+        }
+
+        let contentView = UIView()
+        scrollView.addSubview(contentView)
+        contentView.snp.makeConstraints { (maker) in
+            maker.leading.trailing.equalTo(view)
+            maker.top.bottom.equalToSuperview()
+        }
+
+        contentView.addSubview(stackView)
+        stackView.snp.makeConstraints { (maker) in
+            maker.edges.equalToSuperview().inset(15)
+        }
+    }
 }
