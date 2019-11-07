@@ -128,6 +128,7 @@
 		C1AACA99A3548B24824C6A064C5A9FBD /* Pods-LocalizedNumberInputField.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalizedNumberInputField.release.xcconfig"; path = "Pods/Target Support Files/Pods-LocalizedNumberInputField/Pods-LocalizedNumberInputField.release.xcconfig"; sourceTree = "<group>"; };
 		C60C16387620DED69F9F4C3D772B73E1 /* Pods-Hello.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hello.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hello/Pods-Hello.release.xcconfig"; sourceTree = "<group>"; };
 		C68B779A7402BBB7572FD08BBF6200FA /* Pods_Hello.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hello.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C81D0CC9B9224437050F1CAC45381161 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
 		C91A3884B0FEC46C6E9D11AD24975309 /* Pods_TextFlow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextFlow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C91CDD479B198D2BE9466678CADDC10E /* ShowcaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowcaseTableViewCell.swift; sourceTree = "<group>"; };
 		C95888C8DA4AA86612D6DF9821C74834 /* Pods_NestedStack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NestedStack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -288,6 +289,7 @@
 				086895FB852D8ABE2C2CD7E55B29ADC8 /* LocalizedNumberInputField */,
 				091E8F14BA900E523A6BD5108E82ED3B /* NestedStack */,
 				7F424FEF0B677708A4EA9C95545186F5 /* NumberInputField */,
+				C81D0CC9B9224437050F1CAC45381161 /* Podfile */,
 				849093B32331F90CF0C9EA8D8BC68802 /* Pods */,
 				103757059FF9EEB559F0098D12F41D96 /* Products */,
 				BD8B15546A3E85D346745E72925FED5B /* Showcase */,
