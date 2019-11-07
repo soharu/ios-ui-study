@@ -76,25 +76,25 @@ class URLImageTextAttachment: NSTextAttachment {
         guard image == nil && downloadTask == nil else { return }
 
         downloadTask = KingfisherManager.shared.retrieveImage(with: url) { [weak self] (result) in
-            guard let ss = self else { return }
+            guard let strongSelf = self else { return }
 
             switch result {
             case .success(let value):
-                ss.image = value.image
-                ss.redraw()
+                strongSelf.image = value.image
+                strongSelf.redraw()
 
             case .failure(let error):
                 print(error.localizedDescription)
             }
 
-            ss.downloadTask = nil
+            strongSelf.downloadTask = nil
         }
     }
 
     private func redraw() {
         DispatchQueue.main.async { [weak self] in
-            guard let ss = self else { return }
-            ss.textContainer?.layoutManager?.invalidate(for: ss)
+            guard let strongSelf = self else { return }
+            strongSelf.textContainer?.layoutManager?.invalidate(for: strongSelf)
         }
     }
 }

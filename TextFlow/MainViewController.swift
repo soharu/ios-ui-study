@@ -53,20 +53,20 @@ class MainViewController: UIViewController {
 
         flowButton.rx.tap
             .subscribe(onNext: { [weak self] in
-                guard let ss = self else { return }
+                guard let strongSelf = self else { return }
                 let attributes: [NSAttributedString.Key: Any] = [
                     .font: UIFont.systemFont(ofSize: 20, weight: .medium),
                     .foregroundColor: UIColor.black,
-                    .backgroundColor: ss.colors[ss.currentIndex],
+                    .backgroundColor: strongSelf.colors[strongSelf.currentIndex],
                 ]
                 let attributedText = NSAttributedString(
-                    string: ss.texts[ss.currentIndex],
+                    string: strongSelf.texts[strongSelf.currentIndex],
                     attributes: attributes
                 )
-                ss.currentIndex = (ss.currentIndex + 1) % ss.texts.count
+                strongSelf.currentIndex = (strongSelf.currentIndex + 1) % strongSelf.texts.count
 
-                ss.textView.setAttributedText(attributedText)
-                ss.textView.flow()
+                strongSelf.textView.setAttributedText(attributedText)
+                strongSelf.textView.flow()
             })
             .disposed(by: disposeBag)
     }

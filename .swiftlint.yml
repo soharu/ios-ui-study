@@ -1,10 +1,6 @@
 excluded:
   - Pods
 
-identifier_name:
-  excluded:
-    - ss
-
 trailing_comma:
   mandatory_comma: true
 

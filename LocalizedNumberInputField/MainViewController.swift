@@ -53,10 +53,10 @@ class MainViewController: UIViewController {
         numberInputField.rx.controlEvent(.editingChanged)
             .asDriver()
             .drive(onNext: { [weak self] (_) in
-                guard let ss = self else { return }
-                let text = ss.numberInputField.text ?? ""
-                let digits = ss.digitFormatter.number(from: text) ?? 0
-                ss.numberInputField.text = ss.currentFormatter.string(from: digits)
+                guard let strongSelf = self else { return }
+                let text = strongSelf.numberInputField.text ?? ""
+                let digits = strongSelf.digitFormatter.number(from: text) ?? 0
+                strongSelf.numberInputField.text = strongSelf.currentFormatter.string(from: digits)
             })
             .disposed(by: disposeBag)
 
