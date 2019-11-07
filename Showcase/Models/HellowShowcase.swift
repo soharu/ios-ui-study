@@ -12,8 +12,8 @@ struct HelloShowcase: Showcase {
     var name: String { "Hello, World" }
 
     func instantiate() -> UIViewController {
-        let vc = HelloViewController()
-        vc.navigationItem.title = name
-        return vc
+        let viewController = HelloViewController()
+        viewController.navigationItem.title = name
+        return viewController
     }
 }

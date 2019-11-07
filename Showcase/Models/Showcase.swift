@@ -20,10 +20,10 @@ protocol ViewShowcase: Showcase {
 
 extension ViewShowcase {
     func instantiate() -> UIViewController {
-        let vc = StackViewController()
-        vc.navigationItem.title = name
-        setUp(on: vc.stackView)
-        return vc
+        let viewController = StackViewController()
+        viewController.navigationItem.title = name
+        setUp(on: viewController.stackView)
+        return viewController
     }
 }
 

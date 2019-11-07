@@ -17,10 +17,10 @@ struct FlowingTextShowcase: ViewShowcase {
         stackView.axis = .vertical
         stackView.spacing = 10
 
-        let attributes: [NSAttributedString.Key : Any] = [
-            .font : UIFont.systemFont(ofSize: 20, weight: .medium),
+        let attributes: [NSAttributedString.Key: Any] = [
+            .font: UIFont.systemFont(ofSize: 20, weight: .medium),
             .foregroundColor: UIColor.black,
-            .backgroundColor: UIColor.systemYellow
+            .backgroundColor: UIColor.systemYellow,
         ]
 
         FlowingTextDemo.texts

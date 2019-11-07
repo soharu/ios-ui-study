@@ -51,6 +51,7 @@
 		A1D3A916FA7A854CB7CDAC59AE6B443A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969BCE26732ED7E1A3284BFDAC8A67BD /* MainViewController.swift */; };
 		A38C1AFFAB900BC58769D699564EDC4A /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02D18BD731F3D366C462C75D3B27860 /* RootViewController.swift */; };
 		A562143413B6CC2135F78281B61153E5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B340072CA2D98A590116FF5629AA0753 /* MainViewController.swift */; };
+		AC5804E30455B67D411046479BF12534 /* ColorInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 7B81C5C0A80174AE1A3F40E012B27AC8 /* ColorInfo.json */; };
 		ACEA4C982A98C1C9401C9D0B8B680306 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FE30BADBDA1DD25855181579F1111D /* AppDelegate.swift */; };
 		AF6A04F0753726232A2D0B004A717EEF /* FlowingTextDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DAC92D540B601FF45144DE3A854012 /* FlowingTextDemo.swift */; };
 		B022690553EF383AA3F99B7A9273CD4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0A35AF2A5E0D8EEA972A88AA9D115E3 /* Assets.xcassets */; };
@@ -105,6 +106,7 @@
 		7096EC5D5C0798005CF738CBB5072CEA /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		75DC0CD8E135B30C639B2D9A3E813B2B /* Pods-TextFlow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextFlow.release.xcconfig"; path = "Pods/Target Support Files/Pods-TextFlow/Pods-TextFlow.release.xcconfig"; sourceTree = "<group>"; };
 		76B62AA31C8BBDCDA336CB312F7360D4 /* FlowingTextShowcase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowingTextShowcase.swift; sourceTree = "<group>"; };
+		7B81C5C0A80174AE1A3F40E012B27AC8 /* ColorInfo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ColorInfo.json; sourceTree = "<group>"; };
 		82C3F8CB4F02BEA217593561C1C0968F /* Pods-Hello.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hello.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hello/Pods-Hello.debug.xcconfig"; sourceTree = "<group>"; };
 		88D0E39D325454478D151A4FB9267AB3 /* Pods_Samples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Samples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89771EF4D723C308F23FDFD9BCB50587 /* Showcase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Showcase.swift; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 		091E8F14BA900E523A6BD5108E82ED3B /* NestedStack */ = {
 			isa = PBXGroup;
 			children = (
+				7B81C5C0A80174AE1A3F40E012B27AC8 /* ColorInfo.json */,
 				EA0EE0D9641D14929309E2B122CEE7D6 /* ColorInfo.swift */,
 				3C8C8DC29211FB054DDCE93AEF013845 /* Info.plist */,
 				0BB937EA3AF80B828B5BB73EFDDF403A /* LabeledSwitch.swift */,
@@ -683,6 +686,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FFA4E1EBE462666C7DE1DDFEF1CA16E /* Assets.xcassets in Resources */,
+				AC5804E30455B67D411046479BF12534 /* ColorInfo.json in Resources */,
 				DB3E10889CC158F1C9D321BB51DCDBC0 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -708,6 +712,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		04D1A585554E74205DC04C9BDF13CA67 /* Run Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Swiftlint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 		14D91A1468550DE20F294396A7545450 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -746,24 +768,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Showcase/Pods-Showcase-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		04D1A585554E74205DC04C9BDF13CA67 /* Run Swiftlint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Run Swiftlint";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
 		5122CA5F3C8D91C25B229091F65DB24A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;

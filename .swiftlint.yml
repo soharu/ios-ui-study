@@ -4,3 +4,10 @@ excluded:
 identifier_name:
   excluded:
     - ss
+
+trailing_comma:
+  mandatory_comma: true
+
+line_length: 
+  ignores_comments: true
+

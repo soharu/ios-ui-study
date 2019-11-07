@@ -83,7 +83,7 @@ class MainViewController: UIViewController {
         attributedText.addAttributes(
             [
                 NSAttributedString.Key.font: Resource.font,
-                NSAttributedString.Key.foregroundColor: UIColor.white
+                NSAttributedString.Key.foregroundColor: UIColor.white,
             ],
             range: NSRange(location: 0, length: attributedText.length)
         )
@@ -117,7 +117,7 @@ class MainViewController: UIViewController {
         attributedText.addAttributes(
             [
                 NSAttributedString.Key.font: Resource.largeFont,
-                NSAttributedString.Key.foregroundColor: UIColor.white
+                NSAttributedString.Key.foregroundColor: UIColor.white,
             ],
             range: NSRange(location: 0, length: attributedText.length)
         )

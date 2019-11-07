@@ -16,7 +16,7 @@ class MainViewController: UIViewController {
     let colors: [UIColor] = [
         .systemRed,
         .systemGreen,
-        .systemYellow
+        .systemYellow,
     ]
     var currentIndex = 0
 
@@ -54,10 +54,10 @@ class MainViewController: UIViewController {
         flowButton.rx.tap
             .subscribe(onNext: { [weak self] in
                 guard let ss = self else { return }
-                let attributes: [NSAttributedString.Key : Any] = [
-                    .font : UIFont.systemFont(ofSize: 20, weight: .medium),
+                let attributes: [NSAttributedString.Key: Any] = [
+                    .font: UIFont.systemFont(ofSize: 20, weight: .medium),
                     .foregroundColor: UIColor.black,
-                    .backgroundColor: ss.colors[ss.currentIndex]
+                    .backgroundColor: ss.colors[ss.currentIndex],
                 ]
                 let attributedText = NSAttributedString(
                     string: ss.texts[ss.currentIndex],

@@ -12,7 +12,9 @@ import RxSwift
 import RxCocoa
 
 class MainViewController: UIViewController {
-    private let colorInfos: [ColorInfo] = [ .red, .green, .blue, .pink ]
+    private lazy var colorItems: [ColorInfo.Item] = {
+        return ColorInfo.load()?.data ?? []
+    }()
     private var colorSwitches: [LabeledSwitch] = []
     private let colorStack = UIStackView()
 
@@ -53,8 +55,8 @@ class MainViewController: UIViewController {
         lineView.backgroundColor = .systemGray3
         contentsStack.addArrangedSubview(lineView)
 
-        colorInfos.forEach { (info) in
-            let view = LabeledSwitch.make(with: info)
+        colorItems.forEach { (item) in
+            let view = LabeledSwitch.make(with: item)
             contentsStack.addArrangedSubview(view)
             colorSwitches.append(view)
         }
@@ -62,11 +64,14 @@ class MainViewController: UIViewController {
         colorStack.axis = .horizontal
         colorStack.spacing = 2
         colorStack.distribution = .fillEqually
-        colorInfos.forEach { (info) in
-            let view = UIView()
-            view.backgroundColor = info.color
-            colorStack.addArrangedSubview(view)
-        }
+        colorItems
+            .compactMap { NamedColor(rawValue: $0.name)?.value }
+            .forEach { (color) in
+                let view = UIView()
+                view.backgroundColor = color
+                colorStack.addArrangedSubview(view)
+            }
+
         contentsStack.addArrangedSubview(colorStack)
         colorStack.snp.makeConstraints { (maker) in
             maker.height.equalTo(50)
@@ -93,12 +98,16 @@ class MainViewController: UIViewController {
 }
 
 extension LabeledSwitch {
-    static func make(with colorInfo: ColorInfo) -> LabeledSwitch {
+    static func make(with item: ColorInfo.Item) -> LabeledSwitch {
         let view = LabeledSwitch()
 
-        view.titleLabel.text = "Turn on \(colorInfo.name)"
-        view.descriptionLabel.text = colorInfo.description
-        view.toggleSwitch.onTintColor = colorInfo.color
+        view.titleLabel.text = "Turn on \(item.name)"
+        view.descriptionLabel.text = item.description
+        if let color = NamedColor(rawValue: item.name)?.value {
+            view.toggleSwitch.onTintColor = color
+        } else {
+            assertionFailure("Unknown color item: \(item.name)")
+        }
 
         return view
     }

@@ -16,7 +16,8 @@ class MainViewController: UIViewController {
 
     private let tableView = UITableView()
 
-    private let items = "An object that manages an ordered collection of data items and presents them using customizable layouts"
+    private let items = "An object that manages an ordered collection of data "
+        + "items and presents them using customizable layouts"
         .split(separator: " ")
         .map { String($0) }
 
@@ -37,11 +38,17 @@ class MainViewController: UIViewController {
 }
 
 extension MainViewController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(
+        _ collectionView: UICollectionView,
+        numberOfItemsInSection section: Int
+    ) -> Int {
         return items.count
     }
 
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(
+        _ collectionView: UICollectionView,
+        cellForItemAt indexPath: IndexPath
+    ) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: LabelCollectionView.Cell.reuseIdentifier,
             for: indexPath) as? LabelCollectionView.Cell

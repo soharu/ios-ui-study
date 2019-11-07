@@ -43,7 +43,11 @@ class URLImageTextAttachment: NSTextAttachment {
         super.init(data: nil, ofType: nil)
     }
 
-    override func image(forBounds imageBounds: CGRect, textContainer: NSTextContainer?, characterIndex charIndex: Int) -> UIImage? {
+    override func image(
+        forBounds imageBounds: CGRect,
+        textContainer: NSTextContainer?,
+        characterIndex charIndex: Int
+    ) -> UIImage? {
         assert(textContainer != nil)
 
         if let image = image {
@@ -55,7 +59,12 @@ class URLImageTextAttachment: NSTextAttachment {
         return placeholderImage
     }
 
-    override func attachmentBounds(for textContainer: NSTextContainer?, proposedLineFragment lineFrag: CGRect, glyphPosition position: CGPoint, characterIndex charIndex: Int) -> CGRect {
+    override func attachmentBounds(
+        for textContainer: NSTextContainer?,
+        proposedLineFragment lineFrag: CGRect,
+        glyphPosition position: CGPoint,
+        characterIndex charIndex: Int
+    ) -> CGRect {
         if let image = image {
             return image.sizeThatFits(font: font)
         } else {
@@ -100,11 +109,16 @@ private extension NSLayoutManager {
         let fullRange = NSRange(location: 0, length: attributedString.length)
 
         var refreshRanges = [NSRange]()
-        attributedString.enumerateAttribute(NSAttributedString.Key.attachment, in: fullRange, options: []) { (value, range, _) in
-            if let foundAttachment = value as? NSTextAttachment, foundAttachment == attachment {
-                refreshRanges.append(range)
+        attributedString.enumerateAttribute(
+            NSAttributedString.Key.attachment,
+            in: fullRange,
+            options: [],
+            using: { (value, range, _) in
+                if let foundAttachment = value as? NSTextAttachment, foundAttachment == attachment {
+                    refreshRanges.append(range)
+                }
             }
-        }
+        )
 
         // See below the blog article for the reason for using that function:
         //  https://www.cocoanetics.com/2016/09/asynchronous-nstextattachments-22/
