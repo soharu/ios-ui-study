@@ -6,6 +6,7 @@ def shared_config
   pod 'SnapKit'
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'SwiftLint'
 end
 
 target 'Hello' do
