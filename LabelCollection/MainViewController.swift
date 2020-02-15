@@ -16,8 +16,8 @@ class MainViewController: UIViewController {
 
     private let tableView = UITableView()
 
-    private let items = "An object that manages an ordered collection of data "
-        + "items and presents them using customizable layouts"
+    private let items = ("An object that manages an ordered collection of data "
+        + "items and presents them using customizable layouts")
         .split(separator: " ")
         .map { String($0) }
 
