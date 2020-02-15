@@ -45,7 +45,8 @@ class MainViewController: UIViewController {
         numberInputField.textColor = .black
 
         // Configuration
-        numberInputField.text = currentFormatter.string(from: 0)
+        numberInputField.text = nil
+        numberInputField.placeholder = "Input number (\(minValue) ~ \(maxValue))"
         numberInputField.keyboardType = .numberPad
         numberInputField.delegate = self
 
@@ -54,8 +55,8 @@ class MainViewController: UIViewController {
             .asDriver()
             .drive(onNext: { [weak self] (_) in
                 guard let strongSelf = self else { return }
-                let text = strongSelf.numberInputField.text ?? ""
-                let digits = strongSelf.digitFormatter.number(from: text) ?? 0
+                guard let text = strongSelf.numberInputField.text, text.isEmpty == false else { return }
+                guard let digits = strongSelf.digitFormatter.number(from: text) else { return }
                 strongSelf.numberInputField.text = strongSelf.currentFormatter.string(from: digits)
             })
             .disposed(by: disposeBag)
