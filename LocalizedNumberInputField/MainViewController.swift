@@ -22,7 +22,7 @@ extension NumberFormatter {
 class MainViewController: UIViewController {
     let disposeBag = DisposeBag()
     let numberInputField = UITextField()
-    let minValue: Int = 0
+    let minValue: Int = 1
     let maxValue: Int = 10_000
     let digitFormatter = NumberFormatter.make(with: Locale(identifier: "EN"))
     let currentFormatter = NumberFormatter.make(with: NSLocale.current)
@@ -47,7 +47,6 @@ class MainViewController: UIViewController {
         // Configuration
         numberInputField.text = nil
         numberInputField.placeholder = "Input number (\(minValue) ~ \(maxValue))"
-        numberInputField.keyboardType = .numberPad
         numberInputField.delegate = self
 
         // Event
@@ -70,9 +69,16 @@ extension MainViewController: UITextFieldDelegate {
         _ textField: UITextField,
         shouldChangeCharactersIn range: NSRange,
         replacementString string: String) -> Bool {
-        let currentText = textField.text
-        let newText = (currentText as NSString?)?.replacingCharacters(in: range, with: string) ?? ""
-        let digits = digitFormatter.number(from: newText) ?? 0
+        let currentText = textField.text ?? ""
+        let newText = (currentText as NSString).replacingCharacters(in: range, with: string)
+        guard newText.isEmpty == false else {
+            // 문자열을 삭제한 경우는 허용
+            return true
+        }
+        guard let digits = digitFormatter.number(from: newText) else {
+            // 숫자로 변환할 수 없는 문자가 포함된 경우에는 허용하지 않음
+            return false
+        }
         return minValue ... maxValue ~= digits.intValue
     }
 }
