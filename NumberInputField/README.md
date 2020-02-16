@@ -2,7 +2,7 @@
 
 ## Goal
 
-Make UITextField that accepts only a valid positive decimal number in the specific range
+Make UITextField that accepts only a valid positive decimal number
 
 ## Solution
 
@@ -12,7 +12,7 @@ Use numberPad keyboard
 numberInputField.keyboardType = .numberPad
 ```
 
-Implement a delegate method to prevent invalid characters and to check that the new value is in the valid range
+Implement a delegate method to prevent invalid characters and to check that the new value is less than or equal to maxValue
 
 ```swift
 numberInputField.delegate = self
@@ -26,7 +26,7 @@ func textField(
   let currentText = textField.text
   let newText = (currentText as NSString?)?.replacingCharacters(in: range, with: string) ?? ""
   let number = Int(newText) ?? 0
-  return minValue ... maxValue ~= number
+  return number <= maxValue
 }
 ```
 
