@@ -35,8 +35,8 @@ let currentFormatter = NumberFormatter.make(with: NSLocale.current)
 The `text` of `UITextField` is converted to digits as follows:
 
 ```swift
-let text = ss.numberInputField.text ?? ""
-let digits = ss.digitFormatter.number(from: text) ?? 0
+guard let text = ss.numberInputField.text, text.isEmpty == false else { return }
+guard let digits = ss.digitFormatter.number(from: text) else { return }
 ```
 
 And the digits are converted back to a localized string:
@@ -48,10 +48,17 @@ ss.numberInputField.text = ss.currentFormatter.string(from: digits)
 The `digitFormatter` is enough to check the number is in the valid range:
 
 ```swift
-let currentText = textField.text
-let newText = (currentText as NSString?)?.replacingCharacters(in: range, with: string) ?? ""
-let digits = digitFormatter.number(from: newText) ?? 0
-return minValue ... maxValue ~= digits.intValue
+let currentText = textField.text ?? ""
+let newText = (currentText as NSString).replacingCharacters(in: range, with: string)
+guard newText.isEmpty == false else {
+    // Allow to clear all characters
+    return true
+}
+guard let digits = digitFormatter.number(from: newText) else {
+    // Don't allow the new text that contains non-digit character
+    return false
+}
+return digits.intValue <= maxValue
 ```
 
 Surprisingly, the `digitFormatter` converts `١٥٨8` to `1588`.
