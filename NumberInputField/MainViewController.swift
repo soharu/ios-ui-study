@@ -14,7 +14,6 @@ import RxCocoa
 class MainViewController: UIViewController {
     let disposeBag = DisposeBag()
     let numberInputField = UITextField()
-    let minValue: Int = 0
     let maxValue: Int = 10_000
 
     override func viewDidLoad() {
@@ -61,6 +60,6 @@ extension MainViewController: UITextFieldDelegate {
         let currentText = textField.text
         let newText = (currentText as NSString?)?.replacingCharacters(in: range, with: string) ?? ""
         let number = Int(newText) ?? 0
-        return minValue ... maxValue ~= number
+        return number <= maxValue
     }
 }
