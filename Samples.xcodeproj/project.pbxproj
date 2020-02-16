@@ -44,6 +44,7 @@
 		7B468904B8FB505098EE761A7506C74F /* Showcase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89771EF4D723C308F23FDFD9BCB50587 /* Showcase.swift */; };
 		7BDCDE744CC5A617424688669236F2CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F254C26CDC8DC39F0787FE7CAA6F0732 /* LaunchScreen.storyboard */; };
 		7CC65338049897F0CBE3FAA3C622F5D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0A35AF2A5E0D8EEA972A88AA9D115E3 /* Assets.xcassets */; };
+		7EACAB0AA298E704663A64A597F46B18 /* NumberFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12A582DC6129B25E23310CA55DDD195 /* NumberFieldView.swift */; };
 		802716627C22A41E872432EB44D653ED /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D667AF2CF4EDE4BE49DE770E85389B4D /* RootViewController.swift */; };
 		94FDE98BEA66BCCC69BDA85BAE128EBB /* FlowingTextDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DAC92D540B601FF45144DE3A854012 /* FlowingTextDemo.swift */; };
 		9F0928FD2DB6AAF89279862C5766A221 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F254C26CDC8DC39F0787FE7CAA6F0732 /* LaunchScreen.storyboard */; };
@@ -115,6 +116,7 @@
 		9470B6B35BDFEF3DEA9BFB22567F679A /* Pods-NestedStack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NestedStack.release.xcconfig"; path = "Pods/Target Support Files/Pods-NestedStack/Pods-NestedStack.release.xcconfig"; sourceTree = "<group>"; };
 		969BCE26732ED7E1A3284BFDAC8A67BD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9F54EB6F904FE9A7031111C635573E39 /* Pods_LabelCollection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LabelCollection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A12A582DC6129B25E23310CA55DDD195 /* NumberFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFieldView.swift; sourceTree = "<group>"; };
 		A1439E6268AC58309096A43B313667EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A405BE256E7879915EC83621359BF178 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A6615405AC973BD395E911357DD758CF /* Pods-NestedStack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NestedStack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NestedStack/Pods-NestedStack.debug.xcconfig"; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 			children = (
 				B2731A07C888C7143B48CF805169A346 /* Info.plist */,
 				1D32F33B79B19CD5474784D8FB6D0D2B /* MainViewController.swift */,
+				A12A582DC6129B25E23310CA55DDD195 /* NumberFieldView.swift */,
 				0E37EC8513E171998CE819ADA127CC94 /* RootViewController.swift */,
 			);
 			path = LocalizedNumberInputField;
@@ -1071,6 +1074,7 @@
 			files = (
 				569BC48AB8771B66EC165131C0635733 /* AppDelegate.swift in Sources */,
 				4661D8D43987E383D2DD85C0A8073B26 /* MainViewController.swift in Sources */,
+				7EACAB0AA298E704663A64A597F46B18 /* NumberFieldView.swift in Sources */,
 				B8EDC52455994F8601F25266FCF2183E /* RootViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
