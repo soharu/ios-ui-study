@@ -17,7 +17,7 @@ class NumberFieldView: UIView {
     private let inputField = UITextField()
 
     private let digitFormatter = NumberFormatter.make(with: Locale(identifier: "EN"))
-    private let currentFormatter = NumberFormatter.make(with: NSLocale.current)
+    private let currentFormatter = NumberFormatter.make(with: Locale.current)
 
     private let disposeBag = DisposeBag()
 
