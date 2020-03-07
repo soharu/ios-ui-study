@@ -8,4 +8,4 @@
 
 import UIKit
 
-typealias RootViewController = MainViewController
+typealias RootViewController = FlowingTextDemoViewController
