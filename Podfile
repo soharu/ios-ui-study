@@ -23,10 +23,6 @@ target 'TextAttachmentLab' do
   pod 'Kingfisher', '~> 5.0'
 end
 
-target 'TextFlow' do
-  shared_config
-end
-
 target 'LabelCollection' do
   shared_config
 end
