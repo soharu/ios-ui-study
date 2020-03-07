@@ -10,10 +10,6 @@ def shared_config
   pod 'SwiftLint'
 end
 
-target 'Hello' do
-  shared_config
-end
-
 target 'NumberInputField' do
   shared_config
 end
