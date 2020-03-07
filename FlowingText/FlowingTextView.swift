@@ -10,9 +10,9 @@ import UIKit
 import SnapKit
 
 class FlowingTextView: UIView {
-    let scrollView = UIScrollView()
-    let contentView = UIView()
-    let textLabel = UILabel()
+    private let scrollView = UIScrollView()
+    private let contentView = UIView()
+    private let textLabel = UILabel()
 
     init() {
         super.init(frame: .zero)
@@ -72,7 +72,7 @@ class FlowingTextView: UIView {
             })
     }
 
-    var initialContentOffset: CGPoint {
+    private var initialContentOffset: CGPoint {
         if UIApplication.shared.userInterfaceLayoutDirection == .rightToLeft {
             return CGPoint(
                 x: scrollView.contentSize.width - scrollView.bounds.width,
@@ -82,7 +82,7 @@ class FlowingTextView: UIView {
         }
     }
 
-    var targetContentOffset: CGPoint {
+    private var targetContentOffset: CGPoint {
         if UIApplication.shared.userInterfaceLayoutDirection == .rightToLeft {
             return .zero
         } else {
