@@ -12,9 +12,10 @@ Each target will focus on a single problem and present a concise solution.
 
 I will use [SnapKit](https://github.com/SnapKit/SnapKit) for AutoLayout and use [RxSwift/RxCocoa](https://github.com/ReactiveX/RxSwift) to handle UI events.
 
-## Installation
+## Initial Setup
 
 ```
+bundle install
 bundle exec pod install
 open Samples.xcworkspace
 ```
